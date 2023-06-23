@@ -33,7 +33,7 @@ public class AccountService {
         String username = account.getUsername();
         String password = account.getPassword();
 
-        Account existUser = accountDAO.getAccountByUserName(username); 
+        Account existUser = getAccountByUsername(username); 
     
         if (username.length() > 0 && existUser == null && password.length() > 4) {
             Account newAcc = accountDAO.insertAccount(account);

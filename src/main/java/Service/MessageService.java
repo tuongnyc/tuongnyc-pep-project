@@ -69,7 +69,7 @@ public class MessageService {
      */
     public Message updateMessageById(int id, String msg_text) {
 
-        Message message = messageDAO.getMessageById(id);
+        Message message = getMessageById(id);
 
         if (msg_text.length() > 0 && msg_text.length() < 255 && message != null) {
             message.setMessage_text(msg_text);
